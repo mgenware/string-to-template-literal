@@ -1,17 +1,20 @@
 import t from '../';
+import * as assert from 'assert';
 
-test('No special chars', () => {
-  expect(t('\n\t 1"/')).toBe('`\n\t 1"/`');
+const expect = assert.equal;
+
+it('No special chars', () => {
+  expect(t('\n\t 1"/'), '`\n\t 1"/`');
 });
 
-test('Illegal chars', () => {
-  expect(t('\\`\'"${}')).toBe('`\\\\\\`\'"\\${}`');
+it('Illegal chars', () => {
+  expect(t('\\`\'"${}'), '`\\\\\\`\'"\\${}`');
 });
 
-test('Empty values', () => {
-  expect(t('')).toBe('``');
+it('Empty values', () => {
+  expect(t(''), '``');
   // tslint:disable-next-line no-any
-  expect(t((null as any) as string)).toBe(null);
+  expect(t((null as any) as string), null);
   // tslint:disable-next-line no-any
-  expect(t((undefined as any) as string)).toBe(undefined);
+  expect(t((undefined as any) as string), undefined);
 });
