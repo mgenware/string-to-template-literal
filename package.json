@@ -1,6 +1,6 @@
 {
   "name": "string-to-template-literal",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Converts a string to a template literal",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
@@ -31,9 +31,9 @@
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
-    "mocha": "^6.2.0",
     "cross-env": "^5.2.0",
     "del-cli": "^2.0.0",
+    "mocha": "^6.2.0",
     "tslint": "^5.19.0",
     "typescript": "^3.5.3"
   },
