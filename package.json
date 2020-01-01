@@ -39,5 +39,11 @@
     "eslint": "^6.5.1",
     "typescript": "^3.5.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "/dist/**/*.js",
+    "/dist/**/*.ts",
+    "/dist/**/*.css",
+    "/dist/**/*.map"
+  ]
 }
