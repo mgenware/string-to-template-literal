@@ -13,8 +13,8 @@ it('Illegal chars', () => {
 
 it('Empty values', () => {
   expect(t(''), '``');
-  // tslint:disable-next-line no-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   expect(t((null as any) as string), '``');
-  // tslint:disable-next-line no-any
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   expect(t((undefined as any) as string), '``');
 });
