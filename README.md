@@ -19,5 +19,5 @@ yarn add string-to-template-literal
 import convert from 'string-to-template-literal';
 
 convert('AB`C` ${');
-// `AB\`C\` \${
+// `AB\`C\` \${`
 ```
