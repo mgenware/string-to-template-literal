@@ -4,11 +4,8 @@ illegalChars.set('`', '\\`');
 illegalChars.set('$', '\\$');
 
 export default function convert(s: string): string {
-  if (s === '') {
-    return '``';
-  }
   if (!s) {
-    return s;
+    return '``';
   }
 
   let res = '';

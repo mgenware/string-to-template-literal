@@ -14,7 +14,7 @@ it('Illegal chars', () => {
 it('Empty values', () => {
   expect(t(''), '``');
   // tslint:disable-next-line no-any
-  expect(t((null as any) as string), null);
+  expect(t((null as any) as string), '``');
   // tslint:disable-next-line no-any
-  expect(t((undefined as any) as string), undefined);
+  expect(t((undefined as any) as string), '``');
 });
