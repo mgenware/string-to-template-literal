@@ -8,6 +8,7 @@ it('No special chars', () => {
 });
 
 it('Illegal chars', () => {
+  expect(t('AB`C` ${'), '`AB\\`C\\` \\${`');
   expect(t('\\`\'"${}'), '`\\\\\\`\'"\\${}`');
 });
 
