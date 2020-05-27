@@ -1,16 +1,37 @@
 module.exports = {
-  parser: '@typescript-eslint/parser', // Specifies the ESLint parser
-  extends: [
-    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-  ],
+  parser: '@typescript-eslint/parser',
+  extends: ['airbnb-typescript/base', 'plugin:@typescript-eslint/recommended'],
   parserOptions: {
-    ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
-    sourceType: 'module', // Allows for the use of imports
+    ecmaVersion: 2018,
+    sourceType: 'module',
+    project: './tsconfig.json',
   },
   rules: {
-    // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-plusplus': 'off',
+    // Allow `for-of` loops.
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
+    'lines-between-class-members': [
+      'error',
+      'always',
+      { exceptAfterSingleLine: true },
+    ],
+    'max-classes-per-file': 'off',
+    'prefer-destructuring': ['error', { object: true, array: false }],
+    // We'll let prettier handle operator line breaks.
+    'operator-linebreak': 'off',
+    'function-paren-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'object-curly-newline': 'off',
+    // End of prettier-related rules.
+    'import/extensions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
   },
 };

@@ -1,7 +1,8 @@
 import { promisify } from 'util';
 import { stat } from 'fs';
-const statAsync = promisify(stat);
 import * as assert from 'assert';
+
+const statAsync = promisify(stat);
 
 const expect = assert.equal;
 
