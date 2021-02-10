@@ -4,7 +4,7 @@
   "description": "Encode strings to JavaScript template literals",
   "type": "module",
   "exports": "./dist/main.js",
-  "types": "dist/main.d.ts",
+  "types": "./dist/main.d.ts",
   "author": "Mgenware (https://github.com/mgenware)",
   "homepage": "https://github.com/mgenware/string-to-template-literal",
   "bugs": "https://github.com/mgenware/string-to-template-literal/issues",
