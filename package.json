@@ -1,51 +1,45 @@
 {
   "name": "string-to-template-literal",
   "version": "0.2.2",
-  "description": "Converts a string to a template literal",
-  "main": "dist/main.js",
+  "description": "Encode strings to JavaScript template literals",
+  "type": "module",
+  "exports": "./dist/main.js",
   "types": "dist/main.d.ts",
-  "author": "Mgen (https://www.mgenware.com)",
+  "author": "Mgenware (https://github.com/mgenware)",
   "homepage": "https://github.com/mgenware/string-to-template-literal",
   "bugs": "https://github.com/mgenware/string-to-template-literal/issues",
-  "keywords": [
-    "layit"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgenware/string-to-template-literal.git"
+    "url": "https://github.com/mgenware/string-to-template-literal"
   },
   "license": "MIT",
   "scripts": {
-    "test": "yarn run clean && yarn run compile && yarn run lint && yarn run t",
-    "t": "mocha dist_tests/*.js",
-    "build": "cross-env NODE_ENV=production yarn test",
-    "compile": "tsc -b tests",
-    "dev": "cross-env NODE_ENV=development yarn run clean && tsc -b tests -w",
-    "prepublishOnly": "yarn run test",
-    "lint": "eslint --max-warnings 0 --ext .ts src/ tests/",
-    "clean": "del-cli dist && del-cli dist_tests"
+    "r": "daizong",
+    "test": "daizong build"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12.0.0"
   },
-  "devDependencies": {
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^13.1.2",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
-    "cross-env": "^6.0.3",
-    "del-cli": "^3.0.0",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb-typescript": "^7.2.1",
-    "eslint-plugin-import": "^2.20.2",
-    "mocha": "^6.2.2",
-    "typescript": "^3.7.4"
-  },
-  "dependencies": {},
   "files": [
-    "/dist/**/*.js",
-    "/dist/**/*.ts",
-    "/dist/**/*.css",
-    "/dist/**/*.map"
-  ]
+    "dist/**/*.js",
+    "dist/**/*.ts",
+    "dist/**/*.html",
+    "dist/**/*.css",
+    "dist/**/*.map"
+  ],
+  "devDependencies": {
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "daizong": "^0.12.2",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-typescript-lite": "^12.0.0",
+    "eslint-config-mgenware": "^0.0.5",
+    "eslint-plugin-import": "^2.22.1",
+    "mgenware-tsconfig-node": "^14.0.2",
+    "mocha": "^8.2.1",
+    "source-map-support": "^0.5.19",
+    "typescript": "^4.1.4"
+  }
 }
