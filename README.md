@@ -88,3 +88,7 @@ async function handleIndexHTML(request) {
 ```
 
 The best example of when you might want to use this package is when creating a source code string that you want to embed in your JavaScript application **as raw text**. Think something like a bundler that needs to embed a `.txt` file into a JavaScript source file or a dynamic HTML page that needs to inject some text into a `<script>` tag. You _could_ use `JSON.stringify()` in all these cases, but your text may become unreadable to humans since `JSON.stringify()` forces everything on one line with lots of escapes that are not needed when using `` `template strings` ``.
+
+[pnpm]: https://pnpm.io/
+[yarn]: https://yarnpkg.com/
+[0BSD license]: https://choosealicense.com/licenses/0bsd/
