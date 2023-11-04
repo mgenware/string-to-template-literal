@@ -1,6 +1,6 @@
 {
   "name": "string-to-template-literal",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "🔠 Like JSON.stringify(), but returns a template string",
   "type": "module",
   "exports": "./index.js",
