@@ -16,7 +16,6 @@ import { readFile } from "node:fs/promises";
 // </xmp>
 // </hello>
 const fileText = await readFile(new URL(import.meta.url), "utf8");
-// console.debug(input);
 
 test("eval(stringToTemplateLiteral(input)) == input", () => {
   // Similar to 'JSON.parse(JSON.stringify(string))', this should work!
