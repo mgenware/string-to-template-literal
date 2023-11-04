@@ -4,6 +4,7 @@
   "description": "🔠 Like JSON.stringify(), but returns a template string",
   "type": "module",
   "exports": "./index.js",
+  "types": "./index.d.ts",
   "author": "Mgenware (https://github.com/mgenware)",
   "homepage": "https://github.com/mgenware/string-to-template-literal",
   "bugs": "https://github.com/mgenware/string-to-template-literal/issues",
@@ -13,6 +14,7 @@
     "test": "node --test"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ]
 }
